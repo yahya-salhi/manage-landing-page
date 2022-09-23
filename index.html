@@ -14,9 +14,16 @@
   <body>
    <header class="primary-header">
     <div class="container">
+      <div class="nav-wrapper">
      <a href="#"><img src="images/logo.svg" alt="manage"></a> 
-     <nav class="primary-navigation">
-      <ul role="list" class="nav-list">
+   <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+    <img class="icon-humburger" src="images/icon-hamburger.svg" alt="" aria-hidden="true">
+    <img class="icon-close" src="images/icon-close.svg" alt="" aria-hidden="true">
+    <span class="visually-hidden">Menu</span>
+
+  </button>
+     <nav class="primary-navigation" id="primary-navigation">
+      <ul role="list" class="nav-list" >
         <li><a href="#">Pricing</a></li>
         <li><a href="#">Product</a></li>
         <li><a href="#">About</a></li>
@@ -24,8 +31,9 @@
         <li><a href="#">Community</a></li>
       </ul>
      </nav>
-     <button class="button">Get started</button>
+     <button class="button" style="display: none;">Get started</button>
     </div>
+  </div>
    </header>
    <main>
     <section class="padding-block-900">
