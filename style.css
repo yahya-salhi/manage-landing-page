@@ -119,6 +119,13 @@ body{
   font-family: var(--ff-body);
   color:var(--clr-primary-400)
 }
+p:not([class]){
+  opacity: .7;
+  max-width: 32ch;
+}
+p[data-width='wide']{
+  max-width: 42ch;
+}
 .button{
   display: inline-flex;
   border-radius: 100vmax;
@@ -306,6 +313,11 @@ background-image: linear-gradient(rgb(0 0 0 /0),rgb(0 0 0 /.8));
   width: min(var(--max-width),100% - (var(--padding) *2));
   margin-inline: auto;
 }
+:where(.flow :not(:first-child)){
+ margin-top: var(--flow-spacer, 3em);
+
+}
+
 .even-columns{
   display: grid;
   gap :1rem
@@ -313,6 +325,6 @@ background-image: linear-gradient(rgb(0 0 0 /0),rgb(0 0 0 /.8));
 @media(min-width:50em){
   .even-columns{
     grid-auto-flow: column;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
   }
 }
