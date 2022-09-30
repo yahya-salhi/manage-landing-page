@@ -317,7 +317,10 @@ background-image: linear-gradient(rgb(0 0 0 /0),rgb(0 0 0 /.8));
  margin-top: var(--flow-spacer, 3em);
 
 }
-
+.justify-self-end{
+  justify-self: end;
+  
+  }
 .even-columns{
   display: grid;
   gap :1rem
@@ -325,6 +328,7 @@ background-image: linear-gradient(rgb(0 0 0 /0),rgb(0 0 0 /.8));
 @media(min-width:50em){
   .even-columns{
     grid-auto-flow: column;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 }
+/* todo ive problem with justify self end the section cta  */
