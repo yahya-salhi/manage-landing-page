@@ -230,6 +230,29 @@ background-image: linear-gradient(rgb(0 0 0 /0),rgb(0 0 0 /.8));
       display: none;
     }
 }
+/* cta */
+.cta{
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+@media(min-width:50em){
+  .cta{
+    text-align: left;
+  }
+}
+.cta::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(images/bg-tablet-pattern.svg),
+  url(images/bg-tablet-pattern.svg) ;
+  z-index: -1;
+  opacity: .2;
+  background-position: -20rem -5rem, 80rem  -42rem;
+  background-repeat: no-repeat;
+}
+
 /* utility classes */
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -315,12 +338,19 @@ background-image: linear-gradient(rgb(0 0 0 /0),rgb(0 0 0 /.8));
 }
 :where(.flow :not(:first-child)){
  margin-top: var(--flow-spacer, 3em);
-
+/*selctor specifity is 0 so i can overrayd */
 }
-.justify-self-end{
-  justify-self: end;
-  
-  }
+.vertical-align-center{
+  align-items: center;
+}
+@media(min-width:50em){
+  .justify-self-end-md{
+    justify-self: end;
+   }
+}
+/* .justify-self-end{
+ justify-self: end;
+} */
 .even-columns{
   display: grid;
   gap :1rem
