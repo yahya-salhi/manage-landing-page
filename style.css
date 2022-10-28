@@ -472,7 +472,9 @@ grid-column: 1 / -1;
 }
 .padding-block-700{
   padding-block: var(--size-700);
-  
+}
+.margin-bottom-700{
+  margin-block-end: var(--size-700);
 }
 
 .display-sm-none{
@@ -513,6 +515,20 @@ grid-column: 1 / -1;
   .even-columns{
     grid-auto-flow: column;
     grid-template-columns: 1fr;
+  }
+}
+.text-center{
+  text-align: center;
+}
+.text-center p{
+  margin-inline: auto;
+}
+@media(max-width:50em){
+  .text-center-sm-only{
+    text-align: center;
+  }
+  .text-center-sm-only p{
+    margin-inline: auto;
   }
 }
 /* section 8 not finished   */
